@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Providers Brand</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow p-4">
+        <h1 href="paginaweb.html"      class="text-center text-2xl font-bold uppercase">PROVIDERS BRAND</h1>
+    </header>
+
+    <main class="flex flex-col md:flex-row justify-center items-center p-8">
+        <div class="w-full md:w-1/2">
+            <div id="carousel" class="relative">
+                <img id="mainImage" src="dibujo.jpg" alt="Camiseta" class="w-full h-auto rounded-lg">
+                <div class="absolute inset-0 flex justify-between items-center">
+                    <button onclick="prevImage()" class="bg-gray-800 text-white p-2 rounded-l">❮</button>
+                    <button onclick="nextImage()" class="bg-gray-800 text-white p-2 rounded-r">❯</button>
+                </div>
+            </div>
+            <div class="flex justify-center mt-4">
+                <img src="dibujo.jpg" alt="Camiseta" class="w-1/4 mx-1 cursor-pointer" onclick="changeImage('https://via.placeholder.com/400')">
+                <img src="dibujo.jpg" alt="Camiseta" class="w-1/4 mx-1 cursor-pointer" onclick="changeImage('https://via.placeholder.com/401')">
+                <img src="dibujo.jpg" alt="Camiseta" class="w-1/4 mx-1 cursor-pointer" onclick="changeImage('https://via.placeholder.com/402')">
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
+            <h2 class="text-xl font-bold">Sunshine Basic T-Shirt</h2>
+            <p class="text-lg text-gray-700">DISPONIBLE PRÓXIMAMENTE</p>
+            <label class="block mt-4">Selecciona tu talla:</label>
+            <select class="block w-full p-2 border border-gray-300 rounded">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <label class="block mt-4">Selecciona cantidad:</label>
+        <select class="block w-full p-2 border border-gray-300 rounded">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+            <form id="shippingForm" class="mt-4"></form>
+                <h3 class="text-lg font-semibold">Dirección de envío</h3>
+                <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">
+                    <div class="form-group">
+                        <div class="form-row">
+                          <div class="col">
+
+                <input type="text" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <input type="text" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <input type="text" placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
+            </form>
+            <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
