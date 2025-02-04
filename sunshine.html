@@ -28,7 +28,6 @@
                 <img src="dibujo.jpg" alt="Camiseta" class="w-1/4 mx-1 cursor-pointer" onclick="changeImage('https://via.placeholder.com/402')">
             </div>
         </div>
-
         <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
             <h2 class="text-xl font-bold">Sunshine Basic T-Shirt</h2>
             <p class="text-lg text-gray-700">DISPONIBLE PRÓXIMAMENTE</p>
@@ -46,14 +45,15 @@
             <option value="3">3</option>
             <option value="4">4</option>
         </select>
-
             <h3 class="text-lg font-semibold">Dirección de envío</h3>
-            <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">        
-                <input hidden type="text"  value="CAMISETA SUNSHINE">
-                <input type="text" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
+            <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">
+                <div class="form-group">        
+                    <input hidden type="text" name="modelo_camiseta" value="CAMISETA SUNSHINE">
+                    <input type="text" name="nombre_completo" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                    <input type="text" name="dirección" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                    <input type="text" name="ciudad"    placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                    <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
+                </div>
             </form>
             <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
         </div>

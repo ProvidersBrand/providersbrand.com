@@ -51,20 +51,16 @@
 
                 <h3 class="text-lg font-semibold">Dirección de envío</h3>
                 <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">
-                    <div class="form-group">
-                        <div class="form-row">
-                          <div class="col">
-                <input hidden type="text"  placeholder="CAMISETA BLUEBASICTEE" required>
-                <input type="text" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required  name="Nombre">
-                <input type="text" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required  name="Dirección">
-                <input type="text" placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required name="Ciudad">
-
-                <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
-            </form>
+                    <div class="form-group">        
+                        <input hidden type="text" name="modelo_camiseta" value="CAMISETA BASIC BLUE">
+                        <input type="text" name="nombre_completo" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <input type="text" name="dirección" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <input type="text" name="ciudad"    placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
+                    </div>
+                </form>
             <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
         </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
