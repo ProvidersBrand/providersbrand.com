@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-gray-100">
 
     <header class="bg-white shadow p-4">
@@ -21,9 +22,9 @@
                         <div class="form-row">
                           <div class="col">
                 <input hidden type="text"  placeholder="CAMISETA MAKE YOUR OWN MONEY" required>
-                <input type="text" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" placeholder="Mensaje" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <input type="text" name="nombre" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <input type="text" name="correo" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                <input type="text" name="mensaje"placeholder="Mensaje" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
                 <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Enviar</button>
             </form>
             <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
