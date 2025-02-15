@@ -33,12 +33,6 @@
             <h2 class="text-xl font-bold">SUNSHINE WHITE T-SHIRT</h2>
             <p class="text-lg text-gray-700">DISPONIBLE PRÓXIMAMENTE</p>
             <label class="block mt-4">Selecciona tu talla:</label>
-            <select class="block w-full p-2 border border-gray-300 rounded">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-            </select>
             <label class="block mt-4">Selecciona cantidad:</label>
         <select class="block w-full p-2 border border-gray-300 rounded">
             <option value="1">1</option>
@@ -54,6 +48,12 @@
                     <input type="text" name="dirección" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
                     <input type="text" name="ciudad"    placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
                     <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Reservar</button>
+                    <select class="block w-full p-2 border border-gray-300 rounded" name talla>
+                        <option name="S" value="S">S</option>
+                        <option name="M" value="M">M</option>
+                        <option name="L" value="L">L</option>
+                        <option name="XL" value="XL">XL</option>
+                    </select>
                 </div>
             </form>
             <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
