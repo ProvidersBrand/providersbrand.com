@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"BORN FOR GREATNESS" T-Shirt - Providers Brand</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo-_2_.ico" />
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow p-4">
+        <h1 href="paginaweb.html" class="text-center text-2xl font-bold uppercase">
+            <a href="index.html">PROVIDERS BRAND</a>
+        </h1>
+    </header>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Estilos para el carrusel */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .carousel-track {
+      display: flex;
+      width: 300%; /* 100% × número de imágenes */
+    }
+    
+    .carousel-slide {
+      width: 33.333%; /* 100% ÷ número de imágenes */
+      transition: transform 0.3s ease;
+    }
+    
+    /* Controles del carrusel */
+    .carousel-control {
+      display: none;
+    }
+    
+    /* Flechas de navegación */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 20px;
+    }
+    
+    .arrow-left {
+      left: 10px;
+    }
+    
+    .arrow-right {
+      right: 10px;
+    }
+    
+    /* Miniaturas */
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .thumbnail {
+      width: 25%;
+      padding: 0 0.25rem;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+    
+    .thumbnail:hover {
+      opacity: 1;
+    }
+    
+    /* Lógica del carrusel con CSS */
+    #slide1:checked ~ .carousel-container .carousel-track {
+      transform: translateX(0);
+    }
+    
+    #slide2:checked ~ .carousel-container .carousel-track {
+      transform: translateX(-33.333%);
+    }
+    
+    #slide3:checked ~ .carousel-container .carousel-track {
+      transform: translateX(-66.666%);
+    }
+    
+    /* Resaltar miniaturas activas */
+    #slide1:checked ~ .thumbnail-container .thumb1,
+    #slide2:checked ~ .thumbnail-container .thumb2,
+    #slide3:checked ~ .thumbnail-container .thumb3 {
+      opacity: 1;
+      border: 2px solid #4299e1;
+    }
+    
+    /* Simulación de deslizamiento con áreas sensibles */
+    .swipe-area {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      z-index: 5;
+    }
+    
+    .swipe-left {
+      left: 0;
+    }
+    
+    .swipe-right {
+      right: 0;
+    }
+    
+    /* Ocultar etiquetas de los controles deslizantes pero mantener funcionalidad */
+    .swipe-area label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main class="flex flex-col md:flex-row justify-center items-center p-8">
+    <div class="w-full md:w-1/2">
+      <!-- Controles de radio ocultos -->
+      <input type="radio" name="carousel" id="slide1" class="carousel-control" checked>
+      <input type="radio" name="carousel" id="slide2" class="carousel-control">
+      <input type="radio" name="carousel" id="slide3" class="carousel-control">
+      
+      <!-- Contenedor del carrusel -->
+      <div class="carousel-container rounded-lg shadow-lg">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="Captura de pantalla 2025-03-05 a las 0.06.48.png" alt="Camiseta 1" class="w-full h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="fotoweb.png" alt="Camiseta 2" class="w-full h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="fotoweb 2.png" alt="Camiseta 3" class="w-full h-auto">
+          </div>
+        </div>
+        
+        <!-- Flechas de navegación -->
+        <div class="arrow arrow-left">
+          <label for="slide1" id="to-slide2-right">❮</label>
+          <label for="slide1" id="to-slide2-right">❮</label>
+          <label for="slide2" id="to-slide3-right">❮</label>
+        </div>
+        <div class="arrow arrow-right">
+          <label for="slide2" id="to-slide1-right">❯</label>
+          <label for="slide3" id="to-slide2-right">❯</label>
+          <label for="slide1" id="to-slide3-right">❯</label>
+        </div>
+        
+        <!-- Áreas para deslizar -->
+        <div class="swipe-area swipe-left">
+          <label for="slide3" id="swipe-to-1"></label>
+          <label for="slide1" id="swipe-to-2"></label>
+          <label for="slide2" id="swipe-to-3"></label>
+        </div>
+        <div class="swipe-area swipe-right">
+          <label for="slide2" id="swipe-to-1-right"></label>
+          <label for="slide3" id="swipe-to-2-right"></label>
+          <label for="slide1" id="swipe-to-3-right"></label>
+        </div>
+      </div>
+      
+      <!-- Miniaturas -->
+      <div class="thumbnail-container">
+        <label for="slide1" class="thumbnail thumb1">
+          <img src="Captura de pantalla 2025-03-05 a las 0.06.48.png" alt="Miniatura 1" class="w-full h-auto rounded">
+        </label>
+        <label for="slide2" class="thumbnail thumb2">
+          <img src="fotoweb.png" alt="Miniatura 2" class="w-full h-auto rounded">
+        </label>
+        <label for="slide3" class="thumbnail thumb3">
+          <img src="fotoweb 2.png".png alt="Miniatura 3" class="w-full h-auto rounded">
+        </label>
+      </div>
+    </div>
+        <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
+            <h2 class="text-xl font-bold">"BORN FOR GREATNESS" WHITE T-SHIRT</h2>
+            <p class="text-lg text-gray-700">19.99€</p>
+            <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">
+                <div class="form-group">     
+            <label class="block mt-4">Selecciona tu talla:</label>
+                    <select class="block w-full p-2 border border-gray-300 rounded" name="talla">
+                        <option value="S">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        </select>
+            <label class="block mt-4">Selecciona cantidad:</label>
+                    <select name="cantidad" class="block w-full p-2 border border-gray-300 rounded">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                <h3 class="text-lg font-semibold">Dirección de envío</h3>         
+                        <input hidden type="text" name="modelo_camiseta" value="CAMISETA BASIC WHITE">
+                        <input type="text" name="nombre_completo" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <input type="text" name="dirección" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <input type="text" name="ciudad"    placeholder="Ciudad" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
+                        <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Enviar</button>
+                    </div>
+                </form>
+            <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
