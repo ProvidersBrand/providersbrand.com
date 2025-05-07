@@ -7,25 +7,101 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo-_2_.ico" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+
+        header {
+            background-color: #fff;
+            width: 100%;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        header a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 40px; /* Añadir margen superior */
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        #confirmationMessage {
+            text-align: center;
+            margin-top: 15px;
+            color: #28a745;
+            display: none;
+        }
+    </style>
 </head>
-
-<body class="bg-gray-100">
-
-    <header class="bg-white shadow p-4">
-        <h1 href="paginaweb.html" class="text-center text-2xl font-bold uppercase">
-            <a href="index.html">PROVIDERS BRAND</a>
-        </h1>
+<body>
+    <header>
+        <a href="index.html">PROVIDERS BRAND</a>
     </header>
     <form target="_blank" action="https://formsubmit.co/providersbrand@gmail.com" method="POST">
-                <h3 class="text-lg font-semibold">Contáctanos</h3>
-                <input type="text" name="nombre" placeholder="Nombre completo" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" name="correo" placeholder="Dirección de correo electrónico" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <input type="text" name="mensaje"placeholder="Mensaje" class="block w-full p-2 border border-gray-300 rounded mt-2" required>
-                <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded">Enviar</button>
+        <h3>Contáctanos</h3>
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" name="correo" placeholder="Dirección de correo electrónico" required>
+        <input type="text" name="mensaje" placeholder="Mensaje" required>
+        <button type="submit">Enviar</button>
+        <div id="confirmationMessage">¡Formulario enviado con éxito!</div>
     </form>
-            <div id="confirmationMessage" class="mt-4 text-green-500 hidden">¡Formulario enviado con éxito!</div>
-        </div>
-    </main>
     <script src="script.js"></script>
 </body>
 </html>

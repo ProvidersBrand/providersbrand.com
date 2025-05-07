@@ -17,6 +17,50 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Barra Animada en Bucle</title>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-wrapper {
+            overflow: hidden;
+            background-color: #000600; /* Fondo rojo */
+            color: white;
+            font-size: 1.125rem; /* Tamaño del texto */
+            font-weight: bold;
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .animate-marquee {
+            display: flex;
+            animation: marquee 20s linear infinite; /* Movimiento lento e infinito */
+        }
+
+        .animate-marquee span {
+            padding-right: 2rem; /* Espaciado entre repeticiones del texto */
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-wrapper">
+        <div class="animate-marquee">
+            <span>★★ PROVIDERS BRAND ★★ ESTILO ÚNICO ★★ EDICIONES LIMITADAS ★★</span>
+            <span>★★ PROVIDERS BRAND ★★ ESTILO ÚNICO ★★ EDICIONES LIMITADAS ★★</span>
+            <span>★★ PROVIDERS BRAND ★★ ESTILO ÚNICO ★★ EDICIONES LIMITADAS ★★</span>
+            <span>★★ PROVIDERS BRAND ★★ ESTILO ÚNICO ★★ EDICIONES LIMITADAS ★★</span>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="bg-white shadow">
         <nav class="container mx-auto flex justify-between items-center p-4">
